@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -53,6 +53,13 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      // fontSize: {
+      //   "4xl": "2.25rem",
+      //   "5xl": "3rem",
+      //   "6xl": "3.75rem",
+      //   "7xl": "4.5rem",
+      //   "8xl": "6rem",
+      // },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -74,7 +81,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography'),],
 } satisfies Config
 
 export default config
