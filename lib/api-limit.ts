@@ -33,7 +33,7 @@ export const checkApiLimit = async () => {
         where: { userId },
     });
 
-    if (!userApiLimit || userApiLimit.count <= MAX_FREE_COUNTS) {
+    if (!userApiLimit || userApiLimit.count < MAX_FREE_COUNTS) {
         return true;
     } else {
         return false;
